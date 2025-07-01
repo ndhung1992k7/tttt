@@ -23,7 +23,7 @@
     }
 }
 
-.ThanhDieu_Avatar {
+.nguyenduyhung_Avatar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +61,7 @@
     }
 }
 
-.ThanhDieu_Name {
+.nguyenduyhung_Name {
     font-family: Braah One;
     color: #fff;
     padding: 0;
@@ -271,11 +271,11 @@
     margin-left: -30px;
     align-items: center;
   }
-  .buttons___ .row-thanhdieu{
+  .buttons___ .row-nguyenduyhung{
     display: block;
    margin-left: 65px;
   }
-  .buttons___ .row-thanhdieu button{
+  .buttons___ .row-nguyenduyhung button{
     position: relative;
     display: block;
     height: 40px;
@@ -291,46 +291,46 @@
     border-radius: 0 5px 5px 0;
     transition: all 0s ease-out;
   }
-  .row-thanhdieu button:active{
+  .row-nguyenduyhung button:active{
     top: 3px;
   }
-  .row-thanhdieu button.facebook,
-  .row-thanhdieu button.facebook span{
+  .row-nguyenduyhung button.facebook,
+  .row-nguyenduyhung button.facebook span{
     background: #3B5999;
     border-left: 1px solid #2E4476;
     box-shadow: 0px 5px 0px 0px #2E4476;
   }
-  .row-thanhdieu button.facebook:active{
+  .row-nguyenduyhung button.facebook:active{
     box-shadow: 0px 2px 0px 0px #2E4476;
   }
-  .row-thanhdieu button.twitter,
-  .row-thanhdieu button.twitter span{
+  .row-nguyenduyhung button.twitter,
+  .row-nguyenduyhung button.twitter span{
     background: #46C1F6;
     border-left: 1px solid #269BD0;
     box-shadow: 0px 5px 0px 0px #269BD0;
   }
-  .row-thanhdieu button.twitter:active{
+  .row-nguyenduyhung button.twitter:active{
     box-shadow: 0px 2px 0px 0px #269BD0;
   }
-  .row-thanhdieu button.instagram,
-  .row-thanhdieu button.instagram span{
+  .row-nguyenduyhung button.instagram,
+  .row-nguyenduyhung button.instagram span{
     background: #e1306c;
     border-left: 1px solid #c91d56;
     box-shadow: 0px 5px 0px 0px #c91d56;
   }
-  .row-thanhdieu button.instagram:active{
+  .row-nguyenduyhung button.instagram:active{
     box-shadow: 0px 2px 0px 0px #c91d56;
   }
-  .row-thanhdieu button.youtube,
-  .row-thanhdieu button.youtube span{
+  .row-nguyenduyhung button.youtube,
+  .row-nguyenduyhung button.youtube span{
     background: #DE463B;
     border-left: 1px solid #C02B21;
     box-shadow: 0px 5px 0px 0px #C02B21;
   }
-  .row-thanhdieu button.youtube:active{
+  .row-nguyenduyhung button.youtube:active{
     box-shadow: 0px 2px 0px 0px #C02B21;
   }
-  .row-thanhdieu button span{
+  .row-nguyenduyhung button span{
     position: absolute;
     height: 40px;
     width: 60px;
@@ -342,34 +342,34 @@
     font-weight: normal;
     border-radius: 5px 0 0 5px;
   }
-  .row-thanhdieu button:active span{
+  .row-nguyenduyhung button:active span{
     top: -3px;
   }
-  .row-thanhdieu button.facebook span{
+  .row-nguyenduyhung button.facebook span{
     border-right: 1px solid #2E4476;
   }
-  .row-thanhdieu button.twitter span{
+  .row-nguyenduyhung button.twitter span{
     border-right: 1px solid #269BD0;
   }
-  .row-thanhdieu button.instagram span{
+  .row-nguyenduyhung button.instagram span{
     border-right: 1px solid #c91d56;
   }
-  .row-thanhdieu button.youtube span{
+  .row-nguyenduyhung button.youtube span{
     border-right: 1px solid #C02B21;
   }
-  .row-thanhdieu button.facebook:active span{
+  .row-nguyenduyhung button.facebook:active span{
     box-shadow: 0px 5px 0px 0px #2E4476,
                 6px 4px 2px rgba(0,0,0,0.3);
   }
-  .row-thanhdieu button.twitter:active span{
+  .row-nguyenduyhung button.twitter:active span{
     box-shadow: 0px 5px 0px 0px #269BD0,
                 6px 4px 2px rgba(0,0,0,0.3);
   }
-  .row-thanhdieu button.instagram:active span{
+  .row-nguyenduyhung button.instagram:active span{
     box-shadow: 0px 5px 0px 0px #c91d56,
                 6px 4px 2px rgba(0,0,0,0.3);
   }
-  .row-thanhdieu button.youtube:active span{
+  .row-nguyenduyhung button.youtube:active span{
     box-shadow: 0px 5px 0px 0px #C02B21,
                 6px 4px 2px rgba(0,0,0,0.3);
   }
@@ -630,7 +630,7 @@ a.btn.disabled,fieldset:disabled a.btn {
     }
 }
 
-.ThanhDieu_Name img {
+.nguyenduyhung_Name img {
     vertical-align: middle;
 }
 
