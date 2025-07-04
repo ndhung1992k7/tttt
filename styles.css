@@ -1,0 +1,30 @@
+/* Kiểu dáng cho thông báo Pop-up */
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5); /* Bắt đầu với kích thước nhỏ */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0; /* Ban đầu không nhìn thấy */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Hiệu ứng thu/phóng và mờ dần */
+}
+
+/* Hiển thị thông báo (thu/phóng vào và mờ dần) */
+.popup.show {
+    transform: translateX(-50%) scale(1); /* Phóng to thông báo */
+    opacity: 1; /* Hiển thị thông báo */
+}
+
+/* Ẩn thông báo (thu/phóng ra và mờ dần) */
+.popup.hide {
+    transform: translateX(-50%) scale(0.5); /* Thu nhỏ thông báo */
+    opacity: 0;
+}
