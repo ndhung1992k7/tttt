@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Phát Nhạc Ngẫu Nhiên</title>
         <meta charSet="utf-8"/>
         <meta property="og:url" content="https://nguyenduyhung.com"/>
-        <meta name="description" content="Welome to the website.">
+        <meta name="description" content="Welcome to the website.">
         <meta name="author" content="nguyenduyhungTV">
         <meta name="keywords" content="Nguyenduyhung">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -11,7 +14,6 @@
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="Welcome nguyenduyhung &mdash; Profile Home"/>
         <meta name="next-head-count" content="13"/>
-        <title>nguyenduyhung &mdash; Thông Tin Thanh Toán</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
         <link rel="stylesheet" href="./_static/css/theme.css"/>
@@ -26,7 +28,7 @@
                 <div class="container-fluid">
                     <div class="_plateContainer__">
                         <div style="box-shadow: -1px 0px 15px -6px rgb(99, 111, 219);" class="_infoContainer__ widget-content ___bodystyle">
-                                <img class="nguyenduyhung_Avatar" src="./_static/img/logo.jpg"/>
+                            <img class="nguyenduyhung_Avatar" src="./_static/img/logo.jpg"/>
                             <h2 class="nguyenduyhung_Name">Nguyễn Duy Hưng &ensp;<img height="17" width="17" src="./_static/img/vietnam-number-one.gif"/></h2>
                              <h4 class="TieuSu__">From nguyenduyhung With Love &ensp;<img style="vertical-align: middle;" height="17" width="17" src="./_static/img/vuong-mien.webp"/></h4>
                              <div class="buttons___">
@@ -41,24 +43,15 @@
                                    Youtube</button>
                                 </div>
                              </div>
-                            <div class="Hr_tdtv"></div>                                                  
-                       <!-- <div class="Facebook_Tdtv" >
-                            <button type="button" class="button_facebook">
-                                <span class="button_facebook__text">Facebook Contact</span>
-                                <span class="button_facebook__icon">
-                                    <i class="fab fa-facebook"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <br>
-                        <div class="Facebook_Tdtv" >
-                            <button type="button" class="button_messager">
-                                <span class="button_messager__text">Messenger Contact</span>
-                                <span class="button_messager__icon">
-                                    <i class='fab fa-facebook-messenger'></i>
-                                </span>
-                            </button>
-                        </div>-->    
+                            <div class="Hr_tdtv"></div>   
+                            <!-- Thêm phần phát nhạc -->
+                            <div class="music-player">
+                                <audio id="audioPlayer" controls autoplay>
+                                    <source id="songSource" src="" type="audio/mp3">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <button onclick="playRandomSong()">Play Random Song</button>
+                            </div>
                             <div class="Descriptions____">
                                 <span class="DetailText__">
                                     <b style="font-size: 17px;color: rgb(201, 201, 201);" class="DetailText__">&mdash; Information Payment &mdash;</b>
@@ -73,30 +66,7 @@
                                         <span onclick="copyText('DO HOAI KHUONG');chutaikhoan();" style="font-size: 13px;margin-left: 27px;margin-top: 8px;">Chủ Tài Khoản: DO HOAI KHUONG <img height="17" width="17" src="./_static/img/trai-tim.gif"/></span>
                                     </div>
                                 </div>
-                                <div class="col col-12 col-md-6">
-                                    <div class="infoCard__ ___bodystylecard">
-                                        <img style="margin-top: 18px;" height="42" width="42" src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png"/>
-                                        <u style="margin-top: 5px;" class="STK__">&ensp;Momo Payment&ensp;</u>
-                                        <span onclick="copyText('0968091844');stk();" style="font-size: 13px;margin-left: 27px;margin-top: 8px;">Số Tài Khoản: 0968091844 <img height="15" width="15" src="./_static/img/trai-tim.gif"/></span>
-                                        <span onclick="copyText('DO HOAI KHUONG');chutaikhoan();" style="font-size: 13px;margin-left: 27px;margin-top: 8px;">Chủ Tài Khoản: DO HOAI KHUONG <img height="17" width="17" src="./_static/img/trai-tim.gif"/></span>
-                                    </div>
-                                </div>
-                                <div class="col col-12 col-md-6">
-                                    <div class="infoCard__ ___bodystylecard">
-                                        <img style="margin-top: 4px" height="60" width="137" src="./_static/img/logo-mbbank.png"/>
-                                        <u style="margin-top: -5px;" class="STK__">&ensp;Mb Bank&ensp;</u>
-                                        <span onclick="copyText('0968091844');stk();" style="font-size: 13px;margin-left: 27px;margin-top: 8px;">Số Tài Khoản: 0968091844 <img height="17" width="17" src="./_static/img/trai-tim.gif"/></span>
-                                        <span onclick="copyText('DO HOAI KHUONG');chutaikhoan();" style="font-size: 13px;margin-left: 27px;margin-top: 8px;">Chủ Tài Khoản: DO HOAI KHUONG <img height="17" width="17" src="./_static/img/trai-tim.gif"/></span>
-                                    </div>
-                                </div>
-                                <div class="col col-12 col-md-6">
-                                    <div class="infoCard__ ___bodystylecard">
-                                        <img style="margin-top: 10px;" height="40" width="150" src="./_static/img/logo-card5s.png"/>
-                                        <u style="margin-top: 5px;" class="STK__">&ensp;Card5s.Vn&ensp;</u>
-                                        <span onclick="copyText('0968091844');stk();" style="font-size: 13px;margin-left: 27px;margin-top: 8px;">Số Tài Khoản: 0968091844 <img height="17" width="17" src="./_static/img/trai-tim.gif"/></span>
-                                        <span onclick="copyText('DO HOAI KHUONG');chutaikhoan();" style="font-size: 13px;margin-left: 27px;margin-top: 8px;">Chủ Tài Khoản: DO HOAI KHUONG <img height="17" width="17" src="./_static/img/trai-tim.gif"/></span>
-                                    </div>
-                                </div>
+                                <!-- Các phần còn lại của thông tin thanh toán -->
                             </div>
                         </div>
                     </div>
@@ -108,52 +78,6 @@
                 </div>
             </main>
         </div>
-        <script src="//thanhdieu.com/files/autoplay-music@v1.0.0.js" data-n-g='{"made": "nguyenduyhung"}'></script>
-     <script>
-function copyText(textToCopy) {
-    var CopyTextarea = document.createElement("textarea");
-    CopyTextarea.textContent = textToCopy;
-    document.body.appendChild(CopyTextarea);
-    CopyTextarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(CopyTextarea);
-}
-  function chutaikhoan() {
-  Toastify({
-      text: "Đã copy chủ tài khoản vào bộ nhớ tạm",
-      duration: 4200,
-      backgroundColor: "green"
-    }).showToast();
-    return;
-}
-function stk() {
-  Toastify({
-      text: "Đã copy số tài khoản vào bộ nhớ tạm",
-      duration: 4200,
-      backgroundColor: "green"
-    }).showToast();
-    return;
-}
-function __nguyenduyhungDev() {nguyenduyhungnoti();}
-function nguyenduyhungnoti() {
-  swal({
-    content: {
-      element: "div",
-      attributes: {
-        innerHTML: `
-          <h2 class="text-danger">Thông Tin Thanh Toán !</h2>
-          <h5 class="text-warning"><strong>Copy số tài khoản 1 cách dễ dàng và nhanh chóng.</strong></h5>
-        `,
-      },
-    },
-    buttons: {
-      confirm: {
-        text: "OK",
-        className: "swal-button swal-button--confirm",
-      },
-    },
-  });
-}
-  </script>
+        <script src="script.js"></script> <!-- Liên kết tới tệp script.js -->
     </body>
 </html>
