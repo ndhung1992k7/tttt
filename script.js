@@ -1,5 +1,5 @@
 var songs = [
-  { name: "Bài hát 1", file: "song1.mp3" },
+  { name: "Bài hát 1", file: "https://files.catbox.moe/22en11.mp3" },
   { name: "Bài hát 2", file: "song2.mp3" },
   { name: "Bài hát 3", file: "song3.mp3" },
   { name: "Bài hát 4", file: "song4.mp3" },
