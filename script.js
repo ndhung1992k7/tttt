@@ -11,39 +11,42 @@ var songs = [
   { name: "Bài hát 10", file: "song10.mp3" }
 ];
 
-// Hàm để thông báo bài hát ngẫu nhiên đang được phát
-function playRandomSong() {
-  var randomIndex = Math.floor(Math.random() * songs.length);
-  var song = songs[randomIndex];  // Lấy thông tin bài hát
+let currentAudio = null;
 
-  // Cập nhật thông báo với tên bài hát
-  var notification = document.getElementById('songNotification');
-  if (notification) {
-    notification.textContent = 'Đang phát bài: ' + song.name;
+function playRandomSong() {
+  const randomIndex = Math.floor(Math.random() * songs.length);
+  const song = songs[randomIndex];
+
+  // Dừng bài cũ nếu có
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
   }
 
-  // Hiển thị thông báo pop-up
-  var popup = document.getElementById('popupNotification');
+  // Tạo bài hát mới
+  currentAudio = new Audio(song.file);
+  currentAudio.play();
+
+  // Hiển thị thông báo Pop-up
+  const popup = document.getElementById('popupNotification');
   if (popup) {
+    popup.textContent = '🎵 Đang phát: ' + song.name;
     popup.classList.add('show');
 
-    // Ẩn thông báo sau 3 giây
-    setTimeout(function() {
+    setTimeout(() => {
       popup.classList.add('hide');
-      // Sau khi ẩn, xóa lớp 'show' để có thể hiển thị lại thông báo
-      setTimeout(function() {
+      setTimeout(() => {
         popup.classList.remove('show', 'hide');
-      }, 500);  // Thời gian chờ để hiệu ứng ẩn hoàn tất
-    }, 3000); // Thời gian hiển thị thông báo
+      }, 500);
+    }, 3000);
   }
 
-  // Có thể phát nhạc bằng cách tạo thẻ <audio> và chỉ định bài nhạc
-  var audio = new Audio(song.file);
-  audio.play();
+  // Khi bài hát kết thúc, tự động phát bài tiếp theo
+  currentAudio.addEventListener('ended', function () {
+    playRandomSong();
+  });
 }
 
-// Đảm bảo mã JavaScript chạy sau khi DOM được tải
-document.addEventListener('DOMContentLoaded', function() {
-  playRandomSong();
-  setInterval(playRandomSong, 5000);  // Tự động phát nhạc mỗi 5 giây
+document.addEventListener('DOMContentLoaded', function () {
+  playRandomSong(); // Phát bài đầu tiên khi trang tải
 });
