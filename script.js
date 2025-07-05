@@ -1,52 +1,30 @@
-var songs = [
-  { name: "Bài hát 1", file: "https://files.catbox.moe/22en11.mp3" },
-  { name: "Bài hát 2", file: "song2.mp3" },
-  { name: "Bài hát 3", file: "song3.mp3" },
-  { name: "Bài hát 4", file: "song4.mp3" },
-  { name: "Bài hát 5", file: "song5.mp3" },
-  { name: "Bài hát 6", file: "song6.mp3" },
-  { name: "Bài hát 7", file: "song7.mp3" },
-  { name: "Bài hát 8", file: "song8.mp3" },
-  { name: "Bài hát 9", file: "song9.mp3" },
-  { name: "Bài hát 10", file: "song10.mp3" }
-];
-
-let currentAudio = null;
-
-function playRandomSong() {
-  const randomIndex = Math.floor(Math.random() * songs.length);
-  const song = songs[randomIndex];
-
-  // Dừng bài cũ nếu có
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio = null;
-  }
-
-  // Tạo bài hát mới
-  currentAudio = new Audio(song.file);
-  currentAudio.play();
-
-  // Hiển thị thông báo Pop-up
-  const popup = document.getElementById('popupNotification');
-  if (popup) {
-    popup.textContent = '🎵 Đang phát: ' + song.name;
-    popup.classList.add('show');
-
-    setTimeout(() => {
-      popup.classList.add('hide');
-      setTimeout(() => {
-        popup.classList.remove('show', 'hide');
-      }, 500);
-    }, 3000);
-  }
-
-  // Khi bài hát kết thúc, tự động phát bài tiếp theo
-  currentAudio.addEventListener('ended', function () {
-    playRandomSong();
-  });
+/* Kiểu dáng cho thông báo Pop-up */
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5); /* Bắt đầu với kích thước nhỏ */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0; /* Ban đầu không nhìn thấy */
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  playRandomSong(); // Phát bài đầu tiên khi trang tải
-});
+/* Hiển thị */
+.popup.show {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+/* Ẩn */
+.popup.hide {
+    transform: translateX(-50%) scale(0.5);
+    opacity: 0;
+}
