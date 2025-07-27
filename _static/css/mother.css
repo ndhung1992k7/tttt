@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Braah One|Philosopher|Tilt Warp|Tapestry&display=swap');
+
+ @import url('https://fonts.googleapis.com/css?family=Braah One|Philosopher|Tilt Warp|Tapestry&display=swap');
 ._plateContainer__ {
     display: flex;
     justify-content: center;
@@ -651,4 +652,25 @@ a.btn.disabled,fieldset:disabled a.btn {
 }
 .Footer__ {
     color: #fff
+}
+
+/* --- Gmail Button --- */
+.row-nguyenduyhung button.gmail,
+.row-nguyenduyhung button.gmail span {
+    background: #d93025;
+    border-left: 1px solid #a12218;
+    box-shadow: 0px 5px 0px 0px #a12218;
+}
+.row-nguyenduyhung button.gmail:active {
+    box-shadow: 0px 2px 0px 0px #a12218;
+}
+/* --- Call Button --- */
+.row-nguyenduyhung button.call,
+.row-nguyenduyhung button.call span {
+    background: #34a853;
+    border-left: 1px solid #237836;
+    box-shadow: 0px 5px 0px 0px #237836;
+}
+.row-nguyenduyhung button.call:active {
+    box-shadow: 0px 2px 0px 0px #237836;
 }
