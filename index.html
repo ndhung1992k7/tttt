@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,10 +15,11 @@
         <title>nguyenduyhung &mdash; Thông Tin Thanh Toán</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="true"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
-        <link rel="stylesheet" href="./_static/css/theme.css"/>
+        <link rel="stylesheet" href="./_static/css/thxxeme.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-        <link rel="stylesheet" href="./_static/css/mother.css" />
+        <link rel="stylesheet" href="./_static/css/theme.css"/>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="./_static/css/mother.css"/>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,14 +36,14 @@
                              <h4 class="TieuSu__">From nguyenduyhung With Love &ensp;<img style="vertical-align: middle;" height="17" width="17" src="./_static/img/vuong-mien.webp"/></h4>
                              <div class="buttons___">
                                 <div class="row-nguyenduyhung">
-                                   <button onclick="alert('@Follow Facebook Me Pls ?!');setTimeout(function(){window.open('//facebook.com/wusnguyenduyhung');}, 123);" class="facebook">
-                                    <span><p style="margin-top: 10px;"><i class="fab fa-facebook"></i></p></span>
-                                   Facebook</button>
+                                   <button onclick="alert('📧 Gửi Email cho tôi nhé!');setTimeout(function(){window.open('mailto:yourmail@gmail.com');}, 200);" class="gmail">
+                                    <span><p style="margin-top: 10px;"><i class="fas fa-envelope"></i></p></span>
+                                    Gmail</button>
                                 </div>
                                 <div class="row-nguyenduyhung">
-                                   <button onclick="alert('@Follow Youtube Me Pls ?!');setTimeout(function(){window.open('//www.youtube.com/channel/UCiSP9FWliPIwG-w59dJdilQ');}, 123);" class="youtube">
-                                   <span><p style="margin-top: 10px;"><i class="fab fa-youtube"></i></p></span>
-                                   Youtube</button>
+                                   <button onclick="alert('📞 Gọi cho tôi ngay nhé!');setTimeout(function(){window.open('tel:+849xxxxxxxx');}, 200);" class="call">
+                                   <span><p style="margin-top: 10px;"><i class="fas fa-phone"></i></p></span>
+                                   Call</button>
                                 </div>
                              </div>
                             <div class="Hr_tdtv"></div>                                                  
@@ -111,98 +113,6 @@
                 </div>
             </main>
         </div>
-   <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <title>Trình phát nhạc ngẫu nhiên</title>
-  <style>
-    /* Kiểu dáng cho thông báo Pop-up */
-    .popup {
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%) scale(0.5);
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 15px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        opacity: 0;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-
-    .popup.show {
-        transform: translateX(-50%) scale(1);
-        opacity: 1;
-    }
-
-    .popup.hide {
-        transform: translateX(-50%) scale(0.5);
-        opacity: 0;
-    }
-  </style>
-</head>
-<body>
-  <!-- Thông báo pop-up -->
-  <div id="popupNotification" class="popup"></div>
-
-  <script>
-    var songs = [
-     { name: "Bài hát 1", file: "https://files.catbox.moe/22en11.mp3" },
-      
-    ];
-
-
-    let currentAudio = null;
-
-    function playRandomSong() {
-      const randomIndex = Math.floor(Math.random() * songs.length);
-      const song = songs[randomIndex];
-
-      // Dừng bài cũ nếu có
-      if (currentAudio) {
-        currentAudio.pause();
-        currentAudio = null;
-      }
-
-      // Tạo bài hát mới
-      currentAudio = new Audio(song.file);
-      currentAudio.play();
-
-      // Hiển thị thông báo Pop-up
-      const popup = document.getElementById('popupNotification');
-      if (popup) {
-        popup.textContent = '🎵 Đang phát: ' + song.name;
-        popup.classList.add('show');
-
-        setTimeout(() => {
-          popup.classList.add('hide');
-          setTimeout(() => {
-            popup.classList.remove('show', 'hide');
-          }, 500);
-        }, 3000);
-      }
-
-      // Khi bài hát kết thúc, phát tiếp bài mới
-      currentAudio.addEventListener('ended', function () {
-        playRandomSong();
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      playRandomSong(); // Phát bài đầu tiên khi trang tải
-    });
-  </script>
-</body>
-</html>
-
-
-
      <script>
 function copyText(textToCopy) {
     var CopyTextarea = document.createElement("textarea");
